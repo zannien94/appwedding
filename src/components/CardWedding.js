@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import Card from '@mui/material/Card'
 import { Stack } from '@mui/material'
 import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { CardActionArea } from '@mui/material'
 import AssuredWorkloadRoundedIcon from '@mui/icons-material/AssuredWorkloadRounded'
@@ -16,6 +15,7 @@ const WrapperTyporography = styled.div`
   flex-direction: row;
   /* justify-content: center; */
 `
+
 export default function CardWedding({ title, place, adress, date, time }) {
   return (
     <Card
@@ -30,12 +30,6 @@ export default function CardWedding({ title, place, adress, date, time }) {
       }}
     >
       <CardActionArea>
-        <CardMedia
-          component='img'
-          height='140'
-          image='/public/images/image.png'
-          alt='image'
-        />
         <CardContent>
           <Stack spacing={1}>
             <Typography gutterBottom variant='h5' component='div'>
