@@ -69,15 +69,15 @@ export default function Nawigation() {
           />
           <Tab
             sx={{ color: 'white' }}
-            label='Kontakt'
-            {...a11yProps(2)}
-            onClick={() => navigate('contact')}
-          />
-          <Tab
-            sx={{ color: 'white' }}
             label='Świadkowie'
             {...a11yProps(2)}
             onClick={() => navigate('witness')}
+          />
+          <Tab
+            sx={{ color: 'white' }}
+            label='Kontakt'
+            {...a11yProps(2)}
+            onClick={() => navigate('contact')}
           />
         </Tabs>
       </Box>
