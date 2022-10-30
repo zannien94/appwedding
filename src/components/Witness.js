@@ -1,33 +1,64 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { CardActionArea } from '@mui/material'
 
 const Wrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 const WrapperCard = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   padding: 20px;
+  gap: 20px;
+  @media screen and (min-width: 601px) {
+    flex-direction: row;
+    width: 100%;
+  }
 `
+
+const SCardContent = styled.div`
+  position: absolute;
+  top: 0;
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+  height: 100%;
+  padding: 20px;
+  @media screen and (min-width: 601px) {
+    position: static;
+    background: none;
+    height: auto;
+  }
+`
+
 export default function Witness() {
   return (
     <Wrapper>
       <WrapperCard>
-        <Card sx={{ maxWidth: 400, maxHeight: 550 }}>
-          <CardActionArea>
+        <Card
+          sx={{
+            maxWidth: 320,
+            maxHeight: 280,
+            '@media (min-width: 601px)': {
+              maxWidth: 400,
+              maxHeight: 550,
+            },
+          }}
+        >
+          <CardActionArea sx={{ position: 'relative' }}>
             <CardMedia
               component='img'
               height='370'
               image='/images/agata.jpeg'
               alt='agata'
             />
-            <CardContent>
+            <SCardContent>
               <Typography gutterBottom variant='h5' component='div'>
                 Agata
               </Typography>
@@ -38,10 +69,19 @@ export default function Witness() {
                 spotkaniu w 517 kontakt się wznowił i tak dzięki anielskiej
                 cierpliwość Agaty trwa do dziś.
               </Typography>
-            </CardContent>
+            </SCardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ maxWidth: 400, maxHeight: 550 }}>
+        <Card
+          sx={{
+            maxWidth: 320,
+            maxHeight: 280,
+            '@media (min-width: 601px)': {
+              maxWidth: 400,
+              maxHeight: 550,
+            },
+          }}
+        >
           <CardActionArea>
             <CardMedia
               component='img'
@@ -49,7 +89,7 @@ export default function Witness() {
               image='/images/kuba2.jpeg'
               alt='kuba'
             />
-            <CardContent>
+            <SCardContent>
               <Typography gutterBottom variant='h5' component='div'>
                 Kuba
               </Typography>
@@ -58,7 +98,7 @@ export default function Witness() {
                 dzięki której udało nam się stworzyć custom Hondy CM400T mojego
                 projektu.
               </Typography>
-            </CardContent>
+            </SCardContent>
           </CardActionArea>
         </Card>
       </WrapperCard>

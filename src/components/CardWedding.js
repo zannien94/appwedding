@@ -22,7 +22,6 @@ export default function CardWedding({ title, place, adress, date, time, url }) {
         maxWidth: '350px',
         background: 'rgba(0,0,0,0.7)',
         margin: '0 auto',
-        marginTop: '200px',
         borderRadius: '16px',
         color: 'white',
         padding: '16px',

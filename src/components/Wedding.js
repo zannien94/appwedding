@@ -6,8 +6,15 @@ import CardWedding from './CardWedding'
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+  @media screen and (min-width: 601px) {
+    flex-direction: row;
+    margin-top: 200px;
+  }
 `
 
 const Time = styled.div`
