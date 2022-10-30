@@ -26,7 +26,7 @@ TabPanel.propTypes = {
 }
 
 const getPathIndex = (name) => {
-  return { wedding: 0, menu: 1, witness: 2, contact: 3 }[name] ?? 0
+  return { '/': 0, menu: 1, witness: 2, contact: 3 }[name] ?? 0
 }
 
 export default function Nawigation() {
@@ -55,7 +55,7 @@ export default function Nawigation() {
           <Tab
             sx={{ color: 'white' }}
             label='Ślub'
-            onClick={() => navigate('wedding')}
+            onClick={() => navigate('/')}
           />
           <Tab
             sx={{ color: 'white' }}

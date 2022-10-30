@@ -27,7 +27,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/contact' element={<Contact />} />
-        <Route path='/wedding' element={<Wedding />} />
+        <Route path='/' element={<Wedding />} />
         <Route path='/witness' element={<Witness />} />
         <Route path='/menu' element={<Menu />} />
       </Routes>
