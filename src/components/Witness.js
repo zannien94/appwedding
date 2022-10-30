@@ -44,7 +44,7 @@ export default function Witness() {
         <Card
           sx={{
             maxWidth: 320,
-            maxHeight: 280,
+            maxHeight: 260,
             '@media (min-width: 601px)': {
               maxWidth: 400,
               maxHeight: 550,
@@ -75,7 +75,7 @@ export default function Witness() {
         <Card
           sx={{
             maxWidth: 320,
-            maxHeight: 280,
+            maxHeight: 260,
             '@media (min-width: 601px)': {
               maxWidth: 400,
               maxHeight: 550,
@@ -111,12 +111,15 @@ export default function Witness() {
           justifyContent: 'center',
           padding: '20px',
           fontWeight: '500',
-          fontSize: '30px',
+          fontSize: '20px',
           fontFamily: 'Radley',
           fontStyle: 'italic',
           letterSpacing: '-0.01em',
           lineHeight: '30px',
           textShadow: '0px 0px 8.93849px rgba(0, 0, 0, 0.25)',
+          '@media (min-width: 601px)': {
+            fontSize: '30px',
+          },
         }}
       >
         Idź śmiało przez życie, mniej wesołą minkę! <br />
