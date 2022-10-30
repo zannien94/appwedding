@@ -3,10 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 import styled from '@emotion/styled'
 import './App.css'
 import Navigation from './components/Navigation'
-import HomePage from './components/HomePage'
 import Wedding from './components/Wedding'
 import Contact from './components/Contact'
 import Witness from './components/Witness'
+import Menu from './components/Menu'
 
 const Header = styled.div`
   height: 100vh;
@@ -26,10 +26,10 @@ function App() {
     <Header>
       <Navigation />
       <Routes>
-        <Route path='/' element={<HomePage />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/wedding' element={<Wedding />} />
         <Route path='/witness' element={<Witness />} />
+        <Route path='/menu' element={<Menu />} />
       </Routes>
     </Header>
   )

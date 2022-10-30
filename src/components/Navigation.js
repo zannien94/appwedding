@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useRef } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
@@ -25,27 +25,24 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 }
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  }
+const getPathIndex = (name) => {
+  return { wedding: 0, menu: 1, witness: 2, contact: 3 }[name] ?? 0
 }
 
 export default function Nawigation() {
-  const [value, setValue] = React.useState(0)
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue)
-  }
   const navigate = useNavigate()
+  const { pathname } = useLocation() || {}
+  const pathIndex = getPathIndex(pathname.split('/')[1])
+  const [value, setValue] = useState(pathIndex)
+  const ref = useRef(null)
+  const handleChange = (_, newValue) => setValue(newValue)
+
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%' }} ref={ref}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label='basic tabs example'
           sx={{
             '& .MuiTabs-indicator': {
               backgroundColor: 'white',
@@ -57,26 +54,22 @@ export default function Nawigation() {
         >
           <Tab
             sx={{ color: 'white' }}
-            label='Item One'
-            {...a11yProps(0)}
-            // onClick={() => navigate('/')}
-          />
-          <Tab
-            sx={{ color: 'white' }}
             label='Ślub'
-            {...a11yProps(1)}
             onClick={() => navigate('wedding')}
           />
           <Tab
             sx={{ color: 'white' }}
+            label='Menu'
+            onClick={() => navigate('menu')}
+          />
+          <Tab
+            sx={{ color: 'white' }}
             label='Świadkowie'
-            {...a11yProps(2)}
             onClick={() => navigate('witness')}
           />
           <Tab
             sx={{ color: 'white' }}
             label='Kontakt'
-            {...a11yProps(2)}
             onClick={() => navigate('contact')}
           />
         </Tabs>
