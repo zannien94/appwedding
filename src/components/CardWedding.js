@@ -13,10 +13,9 @@ import QueryBuilderIcon from '@mui/icons-material/QueryBuilder'
 const WrapperTyporography = styled.div`
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
 `
 
-export default function CardWedding({ title, place, adress, date, time }) {
+export default function CardWedding({ title, place, adress, date, time, url }) {
   return (
     <Card
       sx={{
@@ -28,6 +27,7 @@ export default function CardWedding({ title, place, adress, date, time }) {
         color: 'white',
         padding: '16px',
       }}
+      onClick={url ? () => window.open(url, '_blank') : undefined}
     >
       <CardActionArea>
         <CardContent>

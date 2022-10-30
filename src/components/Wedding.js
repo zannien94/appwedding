@@ -65,6 +65,7 @@ export default function Wedding() {
         adress='Rynek 1 20-111 Lublin'
         date='04.11.2022'
         time=' 15:00 - 15:30'
+        url='https://www.google.com/maps/place/Urz%C4%85d+Stanu+Cywilnego/@51.2477694,22.5664923,17z/data=!3m1!4b1!4m5!3m4!1s0x47225713c9bb53bd:0xf1ded2b87d356131!8m2!3d51.2477101!4d22.5679092'
       />
       <CardWedding
         title='Przyjęcie ślubna'
@@ -72,6 +73,7 @@ export default function Wedding() {
         adress='Jabłonna-Majątek 44 a, 23-114 Jabłonna-Majątek'
         date='04.11.2022'
         time=' 17:00 - 04:00'
+        url='https://www.google.com/maps/place/Dworek+Jab%C5%82onna/@51.1062484,22.5845655,17z/data=!3m1!4b1!4m8!3m7!1s0x4722febc3cf1432d:0x38373bdae5d5d1ff!5m2!4m1!1i2!8m2!3d51.1062592!4d22.586726'
       />
       <Time>
         <Card
