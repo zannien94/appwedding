@@ -67,16 +67,18 @@ export default function CardWedding({ title, place, adress, date, time, url }) {
               </Typography>
             </WrapperTyporography>
 
-            <WrapperTyporography>
-              <QueryBuilderIcon sx={{ fontSize: '29px' }} />
-              <Typography
-                variant='h6'
-                color='white'
-                sx={{ marginLeft: '15px' }}
-              >
-                {time}
-              </Typography>
-            </WrapperTyporography>
+            {time && (
+              <WrapperTyporography>
+                <QueryBuilderIcon sx={{ fontSize: '29px' }} />
+                <Typography
+                  variant='h6'
+                  color='white'
+                  sx={{ marginLeft: '15px' }}
+                >
+                  {time}
+                </Typography>
+              </WrapperTyporography>
+            )}
           </Stack>
         </CardContent>
       </CardActionArea>

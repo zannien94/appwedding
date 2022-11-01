@@ -56,16 +56,19 @@ const Menu = () => {
               variant='h6'
               color='white'
             >
-              Rosół z makaronem <br />
-              Roladka drobiowa podana z sałatą, ziemniaki pure i sos borowikowy
+              Rosół z makaronem lub zupa krem z dyni <br />
+              Roladka drobiowa podana z sałatą, ziemniakami pure i sosem
+              borowikowym
               <br />
-              Deser puchar lodowy <br />
+              Szarlotka na gorąco z lodami <br />
               Półmisek biesiadny: żeberka, golonka, szaszłyk, udka, danie
               serwowane z frytkami <br />
-              Strogonof lub gulasz Płonące udzće wieprzowe serwowane przy
-              biesiadnikach
-              <br /> Barszczyk z krokietem
+              Strogonof
+              <br />
+              Kaczka padawana z kluskami i surówką <br />
+              Barszcz czerwony podawany z krokietami
             </Typography>
+
             <Button onClick={onColdClick}>Przekąski zimne</Button>
           </Box>
 
@@ -104,7 +107,7 @@ const Menu = () => {
               <br />
               Sałatka cezar
               <br />
-              Mozarella z pomodorami
+              Mozarella z pomidorami
               <br />
               Roladka z grilowanej cukinii
               <br />

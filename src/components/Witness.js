@@ -109,16 +109,18 @@ export default function Witness() {
         sx={{
           display: 'flex',
           justifyContent: 'center',
-          padding: '20px',
+          padding: '5px',
           fontWeight: '500',
-          fontSize: '20px',
+          fontSize: '15px',
           fontFamily: 'Radley',
           fontStyle: 'italic',
           letterSpacing: '-0.01em',
-          lineHeight: '30px',
+          lineHeight: '15px',
           textShadow: '0px 0px 8.93849px rgba(0, 0, 0, 0.25)',
           '@media (min-width: 601px)': {
             fontSize: '30px',
+            padding: '20px',
+            lineHeight: '30px',
           },
         }}
       >

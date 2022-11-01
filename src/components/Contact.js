@@ -18,6 +18,7 @@ const Contact = () => {
           letterSpacing={2}
           variant='h4'
           color='white'
+          marginBottom={2}
         >
           Kontakt
         </Typography>
@@ -35,7 +36,7 @@ const Contact = () => {
           variant='h6'
           color='white'
         >
-          Darek: 517 772 497
+          Darek: 514 772 497
         </Typography>
       </StyleBox>
     </Stack>
